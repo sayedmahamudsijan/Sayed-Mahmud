@@ -308,16 +308,17 @@
 
 <script>
     function toggleDescription(header) {
-        const description = header.nextElementSibling.nextElementSibling;
-        const arrow = header.querySelector(".arrow");
-        if (description.style.display === "none") {
-            description.style.display = "block";
-            arrow.textContent = "▲";
-        } else {
-            description.style.display = "none";
-            arrow.textContent = "▼";
-        }
+    const description = header.parentElement.querySelector('.description');
+    const arrow = header.querySelector(".arrow");
+    if (description.style.display === "none" || description.style.display === "") {
+        description.style.display = "block";
+        arrow.textContent = "▲";
+    } else {
+        description.style.display = "none";
+        arrow.textContent = "▼";
     }
+}
+
 </script>
 
 <style>
