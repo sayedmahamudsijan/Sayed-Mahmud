@@ -375,10 +375,13 @@
     }
 
     .experience-item .arrow {
-        font-size: 1.2rem;
-        color: #0077ff;
-        transition: all 0.3s ease;
-    }
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #0077ff;
+    transition: all 0.3s ease;
+}
+
+
 
     .experience-item .time-period {
         font-size: 1rem;
@@ -430,16 +433,16 @@
 
 <script>
     function toggleAbstraction(header) {
-        const abstraction = header.nextElementSibling.nextElementSibling;
-        const arrow = header.querySelector(".arrow");
-        if (abstraction.style.display === "none") {
-            abstraction.style.display = "block";
-            arrow.textContent = "▲";
-        } else {
-            abstraction.style.display = "none";
-            arrow.textContent = "▼";
-        }
+    const abstraction = header.parentElement.querySelector('.abstraction');
+    const arrow = header.querySelector(".arrow");
+    if (abstraction.style.display === "none" || abstraction.style.display === "") {
+        abstraction.style.display = "block";
+        arrow.textContent = "▲";
+    } else {
+        abstraction.style.display = "none";
+        arrow.textContent = "▼";
     }
+}
 </script>
 
 <style>
@@ -502,10 +505,11 @@
     }
 
     .publication-item .arrow {
-        font-size: 1.2rem;
-        color: #0077ff;
-        transition: all 0.3s ease;
-    }
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #0077ff;
+    transition: all 0.3s ease;
+}
 
     .publication-item .time-period {
         font-size: 1rem;
