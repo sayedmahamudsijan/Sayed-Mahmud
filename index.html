@@ -259,32 +259,248 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>QA Engineer Intern - A1QA Software Testing Company</h3>
-                <p><strong>Jan 2024 – June 2024 (Remote)</strong></p>
+       <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-container">
+        <!-- Experience Item 1 -->
+        <div class="experience-item">
+            <h3 onclick="toggleDescription(this)">
+                QA Engineer Intern - A1QA Software Testing Company
+                <span class="arrow">▼</span>
+            </h3>
+            <p class="time-period"><strong>Jan 2024 – June 2024 (Remote)</strong></p>
+            <div class="description" style="display: none;">
                 <p>Executed manual test cases, functional, regression, and API testing using JIRA and Postman.</p>
             </div>
-            <div class="experience-item">
-                <h3>Teaching Assistant - International Islamic University Chittagong</h3>
-                <p><strong>Nov 2022 – Nov 2023 (Chittagong, Bangladesh)</strong></p>
-                <p>Conducted lab sessions and supported students in VLSI System Design, Analog Circuit Design, etc.</p>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="experience-item">
+            <h3 onclick="toggleDescription(this)">
+                Teaching Assistant - International Islamic University Chittagong
+                <span class="arrow">▼</span>
+            </h3>
+            <p class="time-period"><strong>Nov 2022 – Nov 2023 (Chittagong, Bangladesh)</strong></p>
+            <div class="description" style="display: none;">
+                <p>Conducted lab sessions and supported students in VLSI System Design, Analog Circuit Design, and research-based projects.</p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleDescription(header) {
+        const description = header.nextElementSibling.nextElementSibling;
+        const arrow = header.querySelector(".arrow");
+        if (description.style.display === "none") {
+            description.style.display = "block";
+            arrow.textContent = "▲";
+        } else {
+            description.style.display = "none";
+            arrow.textContent = "▼";
+        }
+    }
+</script>
+
+<style>
+    #experience {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    #experience h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #004aad;
+        position: relative;
+    }
+
+    #experience h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #0077ff;
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+
+    .experience-container {
+        max-width: 800px;
+        margin: auto;
+        text-align: left;
+    }
+
+    .experience-item {
+        background: #f9f9f9;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .experience-item h3 {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .experience-item .arrow {
+        font-size: 1.2rem;
+        color: #0077ff;
+        transition: all 0.3s ease;
+    }
+
+    .experience-item .time-period {
+        font-size: 1rem;
+        color: #777;
+    }
+
+    .description {
+        font-size: 1rem;
+        color: #555;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+</style>
+
 
         <!-- Publications Section -->
         <section id="publications">
-            <h2>Publications</h2>
-            <div class="publication-item">
-                <h3>Polarization-Selective Metamaterial Absorber</h3>
-                <p>Heliyon Journal, Nov 2024</p>
+    <h2>Publications</h2>
+    <div class="publication-container">
+        <!-- Publication Item 1 -->
+        <div class="publication-item">
+            <a href="https://www.sciencedirect.com/science/article/pii/S2405844024161336" target="_blank">
+                <h3 onclick="toggleAbstraction(this)">
+                    Polarization-Selective Metamaterial Absorber Using Tailored Y-Shaped SRR for UWB Device and Doppler Navigation Aids Applications
+                    <span class="arrow">▼</span>
+                </h3>
+            </a>
+            <p class="time-period"><strong>Heliyon Journal, Nov 2024</strong></p>
+            <div class="abstraction" style="display: none;">
+                <p> In this paper, we present an unprecedented metamaterial absorber design exhibiting exceptional characteristics in electromagnetic wave absorption. The proposed bent Y-shaped structure, fabricated on an FR-4 substrate with copper patches, showcases remarkable performance across a diverse frequency spectrum. Through exhaustive simulations in CST, this design manifests eight distinct resonant frequencies, achieving absorption rates exceeding 90 % at each resonance. The resonances, strategically spanning from L-band (3.728 GHz) through S-band, C-band, X-band, Ku-band, and K-band up to 22.664 GHz, signify unparalleled versatility and efficacy in mitigating electromagnetic radiation. It investigates the equivalent circuit parameters of a proposed metamaterial absorber design, focusing on inductance (L), capacitance (C), and resistance (R). This paper investigates the applications of UWB devices at 3.728 GHz and Doppler navigation aids at the 13.4 GHz frequency as regulated by the Federal Communications Commission. It includes a discussion on near-zero refractive Index Metamaterials (NZRIM), highlighting their potential utilization in achieving extraordinary control over wave behaviour. Notably, the absorber's inherent polarization insensitivity fortifies its adaptability in various applications. Additionally, the metamaterial exhibits near-zero or negative permittivity, altering electric response, while simultaneously demonstrating permeability absolute zero throughout all frequency bands sparking new avenues for exploration and challenging conventional electromagnetic theories.</p>
             </div>
-            <div class="publication-item">
-                <h3>Eye-Shaped Labyrinth Metamaterial Absorber</h3>
-                <p>IEEE ICTP Conference, Dec 2023</p>
+        </div>
+
+        <!-- Publication Item 2 -->
+        <div class="publication-item">
+            <a href="https://ieeexplore.ieee.org/document/10491066" target="_blank">
+                <h3 onclick="toggleAbstraction(this)">
+                    Eye-Shaped Labyrinth Metamaterial Absorber For C, X, Ku & K-Band Applications
+                    <span class="arrow">▼</span>
+                </h3>
+            </a>
+            <p class="time-period"><strong>IEEE International Conference on Telecommunications and Photonics (ICTP), Dec 2023</strong></p>
+            <div class="abstraction" style="display: none;">
+                <p> In the microwave frequency domain, this paper introduces a simple design aimed at designing a multi-band polarization-insensitive MA. Polarization-insensitive MA are currently highly appealing owing to their distinctive absorption characteristics across various polarization angles. This design involves imprinting a specific structure onto a metal-backed dielectric substrate FR-4, which comprises an eye-shaped labyrinth structure. Upon conducting a series of diverse analyses at an angle of incidence perpendicular to the surface, it has been determined that the proposed arrangement exhibits significant levels of absorption, reaching 94.93% at frequencies of 5.76 GHz, 97.73% at frequencies of 7.432 GHz, 95.89% at frequencies of 10.644 GHz, 98.28% at frequencies of 13.813 GHz, 93.18% at frequencies of 19.048 GHz, 98.72% at frequencies of 21.006 GHz, 99.9% at frequencies of 22.856 GHz, 91.85% at frequencies of 23.756 GHz, and 99.15% at frequencies of 24.746 GHz. To gain deeper insights into the absorption mechanism intrinsic to this design, provide visualizations of surface current distributions.</p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleAbstraction(header) {
+        const abstraction = header.nextElementSibling.nextElementSibling;
+        const arrow = header.querySelector(".arrow");
+        if (abstraction.style.display === "none") {
+            abstraction.style.display = "block";
+            arrow.textContent = "▲";
+        } else {
+            abstraction.style.display = "none";
+            arrow.textContent = "▼";
+        }
+    }
+</script>
+
+<style>
+    #publications {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    #publications h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #004aad;
+        position: relative;
+    }
+
+    #publications h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #0077ff;
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+
+    .publication-container {
+        max-width: 800px;
+        margin: auto;
+        text-align: left;
+    }
+
+    .publication-item {
+        background: #f9f9f9;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .publication-item:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .publication-item h3 {
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #333;
+        margin-bottom: 10px;
+        text-decoration: none;
+    }
+
+    .publication-item a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .publication-item .arrow {
+        font-size: 1.2rem;
+        color: #0077ff;
+        transition: all 0.3s ease;
+    }
+
+    .publication-item .time-period {
+        font-size: 1rem;
+        color: #777;
+    }
+
+    .abstraction {
+        font-size: 1rem;
+        color: #555;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+</style>
+
 
         <!-- Projects Section -->
         <section id="projects">
