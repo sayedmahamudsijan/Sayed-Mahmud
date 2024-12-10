@@ -3,29 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sayed Mahmud - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        section h2 {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm [Your Name], and this is my portfolio.</p>
+        <h1>Sayed Mahmud</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>Brief introduction about yourself.</p>
-    </section>
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1: Description with a <a href="#">link</a>.</li>
-            <li>Project 2: Description with a <a href="#">link</a>.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">Your LinkedIn</a></p>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a recent graduate in Electronic and Telecommunication Engineering from the International Islamic University Chittagong, Bangladesh. My research interests lie in computational electromagnetics, metamaterials, and antenna design. I aspire to contribute to advanced technological solutions through innovative research and development.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: MATLAB, Python, JQL, SQL, NoSQL</li>
+                <li>Software Tools: CST Studio, Proteus, LTSpice, JIRA, POSTMAN</li>
+                <li>Languages: Bangla (Native), English (Fluent)</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Brain Tumor Classification Using ANN - Developed a MATLAB-based ANN model to classify brain tumors using MRI data.</li>
+                <li>Polarization-Selective Metamaterial Absorber - Designed a metamaterial absorber for UWB devices, published in Heliyon.</li>
+            </ul>
+        </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            <ul>
+                <li>"Polarization-Selective Metamaterial Absorber Using Tailored Y-Shaped SRR for UWB Device and Doppler Navigation Aids Applications" (Heliyon, 2024)</li>
+                <li>"Eye-Shaped Labyrinth Metamaterial Absorber for C, X, Ku & K-Band Applications" (IEEE Xplore)</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:sayedmahamudsijann@gmail.com">sayedmahamudsijann@gmail.com</a></p>
+            <p>Phone: +880 187 580 6948</p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/sayed-mahamud-2619b211">linkedin.com/in/sayed-mahamud-2619b211</a></p>
+            <p>Google Scholar: <a href="https://scholar.google.com/citations?hl=en&user=ERA4SrsAAAAJ">Google Scholar Profile</a></p>
+            <p>ORCID: <a href="https://orcid.org/0000-0002-3260-308X">0000-0002-3260-308X</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sayed Mahmud. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
