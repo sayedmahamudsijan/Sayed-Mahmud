@@ -6,7 +6,7 @@
     <title>Sayed Mahmud - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-      /* General Styles */
+       /* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -311,6 +311,118 @@ footer a {
     }
 }
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayed Mahmud's Portfolio</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body style */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #f0f0f0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        /* Profile Image with effect */
+        img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        /* Navigation Styles */
+        nav {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, color 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            transform: scale(1.2);
+            color: #ffc107;
+        }
+
+        /* Header Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
