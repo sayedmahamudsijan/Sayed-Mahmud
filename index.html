@@ -411,18 +411,6 @@
                     <div class="skill-level" style="width: 75%;"></div>
                 </div>
             </div>
-            <div class="skill">
-                <span>HTML</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 95%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Linux Shell</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%;"></div>
-                </div>
-            </div>
         </div>
 
         <!-- Software Proficiency Section -->
@@ -452,136 +440,101 @@
                     <div class="skill-level" style="width: 85%;"></div>
                 </div>
             </div>
-            <div class="skill">
-                <span>Test Rail</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 75%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>POSTMAN</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Virtual Machine</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%;"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Languages Section -->
-        <div class="skill-category">
-            <h3>Languages</h3>
-            <div class="skill">
-                <span>English (Fluent)</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 95%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Bangla (Native)</span>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
 
+
 <!-- CSS -->
-<style>
-    /* General Section Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* Skills Section General Styling */
-    #skills {
-        padding: 40px;
-        background-color: #ffffff;
-        color: #333;
-        text-align: center;
-        border-top: 4px solid #6a11cb;
-    }
+/* Skills Section General Styling */
+#skills {
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
+}
 
-    #skills h2 {
-        margin-bottom: 20px;
-        font-size: 2.5em;
-        color: #6a11cb;
-    }
+#skills h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #6a11cb;
+}
 
-    .skills {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-    }
+/* Skill Bar Container */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-    .skill-category {
-        padding: 10px 0;
-    }
+.skill-category {
+    padding: 10px 0;
+}
 
-    /* Individual Skill Bars */
-    .skill {
-        margin: 10px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+.skill {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    .skill span {
-        flex: 1;
-        font-size: 1em;
-        padding-right: 15px;
-    }
+.skill span {
+    font-size: 1em;
+    padding-right: 10px;
+}
 
-    .skill-bar {
-        flex: 3;
-        height: 20px;
-        background: #ddd;
-        border-radius: 5px;
-        overflow: hidden;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+.skill-bar {
+    flex: 3;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
 
-    .skill-level {
-        height: 100%;
-        background: #6a11cb;
-        border-radius: 5px;
-        transition: width 1s ease-in-out;
-    }
+.skill-level {
+    height: 100%;
+    background: #6a11cb;
+    width: 0; /* Initially set to 0 to reset animation */
+    transition: width 1s ease-in-out;
+}
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        #skills {
-            padding: 20px;
-        }
-
-        .skill span {
-            font-size: 0.9em;
-        }
-    }
-</style>
 
 <!-- JavaScript -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const skillLevels = document.querySelectorAll('.skill-level');
+let isSkillsTriggered = false;
 
-        skillLevels.forEach(skill => {
-            const width = skill.style.width; // Get the set percentage width
-            skill.style.width = "0%";
-            setTimeout(() => {
-                skill.style.width = width; // Animate the bar after DOM is fully rendered
-            }, 100);
-        });
+// Function to animate the skill loading bars
+function animateSkills() {
+    const skillLevels = document.querySelectorAll('.skill-level');
+    
+    skillLevels.forEach(skill => {
+        const targetWidth = skill.style.width;
+        skill.style.width = '0'; // Reset skill animation to 0
+        // Use setTimeout to ensure proper DOM redraw after resetting
+        setTimeout(() => {
+            skill.style.width = targetWidth;
+        }, 50);
     });
-</script>
+}
+
+// Detect scroll into skills section
+document.addEventListener('scroll', () => {
+    const skillsSection = document.getElementById('skills');
+    const skillsSectionPosition = skillsSection.offsetTop - window.innerHeight;
+    if (window.scrollY > skillsSectionPosition && !isSkillsTriggered) {
+        animateSkills();
+        isSkillsTriggered = true; // Trigger the skills animation only once
+    }
+
+    // Allow re-triggering on scroll back into view
+    if (window.scrollY < skillsSectionPosition) {
+        isSkillsTriggered = false;
+    }
+});
 
 
         <!-- Experience Section -->
