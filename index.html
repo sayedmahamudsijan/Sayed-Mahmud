@@ -137,6 +137,39 @@
             color: white;
         }
 
+        /* Experience Section */
+        .experience-item {
+            margin: 20px;
+            text-align: left;
+        }
+
+        .experience-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #004aad;
+        }
+
+        .experience-item p {
+            margin-bottom: 10px;
+        }
+
+        /* Publications Section */
+        .publication-item {
+            margin: 20px;
+            text-align: left;
+        }
+
+        .publication-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #004aad;
+        }
+
+        .publication-item p {
+            font-style: italic;
+            color: #555;
+        }
+
         /* Projects Section */
         .projects .project-item {
             display: flex;
@@ -193,6 +226,8 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -223,21 +258,45 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>QA Engineer Intern - A1QA Software Testing Company</h3>
+                <p><strong>Jan 2024 – June 2024 (Remote)</strong></p>
+                <p>Executed manual test cases, functional, regression, and API testing using JIRA and Postman.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Teaching Assistant - International Islamic University Chittagong</h3>
+                <p><strong>Nov 2022 – Nov 2023 (Chittagong, Bangladesh)</strong></p>
+                <p>Conducted lab sessions and supported students in VLSI System Design, Analog Circuit Design, etc.</p>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publication-item">
+                <h3>Polarization-Selective Metamaterial Absorber</h3>
+                <p>Heliyon Journal, Nov 2024</p>
+            </div>
+            <div class="publication-item">
+                <h3>Eye-Shaped Labyrinth Metamaterial Absorber</h3>
+                <p>IEEE ICTP Conference, Dec 2023</p>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects">
                 <div class="project-item">
                     <h3>Brain Tumor Classification Using ANN</h3>
-                    <p>
-                        Developed an artificial neural network to classify MRI scans of brain tumors into malignant, benign, or no tumor categories.
-                    </p>
+                    <p>Developed an artificial neural network to classify MRI scans of brain tumors into malignant, benign, or no tumor categories.</p>
                 </div>
                 <div class="project-item">
                     <h3>Daylight-Dependent Streetlight</h3>
-                    <p>
-                        Designed an energy-efficient system to optimize streetlight operations using light-dependent resistors.
-                    </p>
+                    <p>Designed an energy-efficient system to optimize streetlight operations using light-dependent resistors.</p>
                 </div>
             </div>
         </section>
@@ -253,9 +312,6 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Sayed Mahmud. All rights reserved.</p>
-        <p>
-            Built with ❤ by <a href="#about">Sayed Mahmud</a>
-        </p>
     </footer>
 </body>
 </html>
