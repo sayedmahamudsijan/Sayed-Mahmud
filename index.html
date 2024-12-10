@@ -335,7 +335,7 @@
     <header>
         <img src="dp.jpg" alt="Sayed Mahmud's Profile Picture">
         <h1>Sayed Mahmud</h1>
-        <p>QA Engineer | Researcher in Computational Electromagnetics</p>
+        <p>SQA Engineer | Researcher in Computational Electromagnetics</p>
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -378,35 +378,210 @@
        <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
-        <h3>Programming Languages</h3>
-        <ul>
-            <li>MATLAB</li>
-            <li>Python</li>
-            <li>JQL</li>
-            <li>SQL</li>
-            <li>NoSQL (MongoDB)</li>
-            <li>HTML</li>
-            <li>Linux Shell</li>
-        </ul>
+        <!-- Programming Languages Section -->
+        <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <div class="skill">
+                <span>MATLAB</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Python</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>JQL</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>SQL</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>NoSQL (MongoDB)</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>HTML</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Linux Shell</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
 
-        <h3>Software Proficiency</h3>
-        <ul>
-            <li>CST Studio</li>
-            <li>Proteus</li>
-            <li>LTSpice</li>
-            <li>JIRA</li>
-            <li>Test Rail</li>
-            <li>POSTMAN</li>
-            <li>Virtual Machine</li>
-        </ul>
+        <!-- Software Proficiency Section -->
+        <div class="skill-category">
+            <h3>Software Proficiency</h3>
+            <div class="skill">
+                <span>CST Studio</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Proteus</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>LTSpice</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>JIRA</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Test Rail</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>POSTMAN</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Virtual Machine</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
 
-        <h3>Languages</h3>
-        <ul>
-            <li>English (Fluent)</li>
-            <li>Bangla (Native)</li>
-        </ul>
+        <!-- Languages Section -->
+        <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill">
+                <span>English (Fluent)</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Bangla (Native)</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+<!-- CSS -->
+<style>
+    /* General Section Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Skills Section General Styling */
+    #skills {
+        padding: 40px;
+        background-color: #ffffff;
+        color: #333;
+        text-align: center;
+        border-top: 4px solid #6a11cb;
+    }
+
+    #skills h2 {
+        margin-bottom: 20px;
+        font-size: 2.5em;
+        color: #6a11cb;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .skill-category {
+        padding: 10px 0;
+    }
+
+    /* Individual Skill Bars */
+    .skill {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .skill span {
+        flex: 1;
+        font-size: 1em;
+        padding-right: 15px;
+    }
+
+    .skill-bar {
+        flex: 3;
+        height: 20px;
+        background: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-level {
+        height: 100%;
+        background: #6a11cb;
+        border-radius: 5px;
+        transition: width 1s ease-in-out;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #skills {
+            padding: 20px;
+        }
+
+        .skill span {
+            font-size: 0.9em;
+        }
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const skillLevels = document.querySelectorAll('.skill-level');
+
+        skillLevels.forEach(skill => {
+            const width = skill.style.width; // Get the set percentage width
+            skill.style.width = "0%";
+            setTimeout(() => {
+                skill.style.width = width; // Animate the bar after DOM is fully rendered
+            }, 100);
+        });
+    });
+</script>
 
 
         <!-- Experience Section -->
